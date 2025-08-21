@@ -17,6 +17,7 @@ async function up() {
       table.boolean('require_name_email').defaultTo(false);
       table.boolean('moderate_comments').defaultTo(true);
       table.boolean('show_feedback_to_guests').defaultTo(true);
+      table.boolean('enable_rate_limiting').defaultTo(false);
       table.timestamp('created_at').defaultTo(db.fn.now());
       table.timestamp('updated_at').defaultTo(db.fn.now());
       table.unique(['event_id']);
